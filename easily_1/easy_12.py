@@ -1,9 +1,13 @@
 # 一个数的所有因数
 def find_all_factors(num):
-    # 此处写你的代码
-    for n in range(1, num):
-        if num%n == 0:
-            
+    nums: list[int] = []
+    if num < 1:
+        return nums
+    else:
+        for n in range(1, num+1):
+            if num % n == 0:
+                nums.append(n)  # 列表追加元素
+    return nums
 # 输入一个数字
 num = int(input())
 
